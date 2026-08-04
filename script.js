@@ -1,16 +1,3 @@
-const loadPartial = async (containerId, fileName) => {
-  const container = document.getElementById(containerId);
-  if (!container) return;
-
-  try {
-    const response = await fetch(fileName);
-    if (!response.ok) throw new Error(`Failed to load ${fileName}: ${response.status}`);
-    container.innerHTML = await response.text();
-  } catch (error) {
-    console.error(error);
-  }
-};
-
 const initNav = () => {
   const navToggle = document.getElementById('navToggle');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -62,6 +49,42 @@ const initEkg = () => {
   );
 };
 
+const initFaq = () => {
+  const items = document.querySelectorAll('.faq-item');
+  if (!items.length) return;
+
+  items.forEach((item) => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+      items.forEach((other) => {
+        other.classList.remove('is-open');
+        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+};
+
+const initMomentsCarousel = () => {
+  const track = document.getElementById('momentsTrack');
+  const prevBtn = document.getElementById('momentPrev');
+  const nextBtn = document.getElementById('momentNext');
+  if (!track || !prevBtn || !nextBtn) return;
+
+  const scrollByCard = (direction) => {
+    const card = track.querySelector('.moment-card');
+    if (!card) return;
+    track.scrollBy({ left: direction * (card.getBoundingClientRect().width + 20), behavior: 'smooth' });
+  };
+
+  prevBtn.addEventListener('click', () => scrollByCard(-1));
+  nextBtn.addEventListener('click', () => scrollByCard(1));
+};
+
 const initForm = () => {
   const form = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
@@ -83,16 +106,13 @@ const initForm = () => {
   });
 };
 
-const initializeSite = async () => {
-  await Promise.all([
-    loadPartial('site-header', 'header.html'),
-    loadPartial('site-footer', 'footer.html')
-  ]);
-
+const initializeSite = () => {
   initNav();
   initReveal();
   initEkg();
   initForm();
+  initFaq();
+  initMomentsCarousel();
 };
 
 if (document.readyState === 'loading') {
