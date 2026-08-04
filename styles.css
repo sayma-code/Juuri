@@ -447,7 +447,7 @@ body.home{background:var(--bg-page);}
   padding:10px 18px;
   box-shadow:0 14px 30px -18px rgba(10,60,120,.45);
 }
-.home-logo{color:#ffffff; text-transform:lowercase; font-size:1.3rem;}
+.home-logo{color:#ffffff; text-transform:lowercase; font-size:1.3rem; padding-left:6px;}
 .home-nav-links a{color:rgba(255,255,255,.9);}
 .home-nav-links a:hover{color:#ffffff;}
 .home-nav .nav-toggle svg{stroke:#ffffff;}
@@ -455,13 +455,14 @@ body.home{background:var(--bg-page);}
   margin-top:8px; background:var(--teal); border:none; border-radius:20px; padding:10px 18px 16px;
 }
 .home-mobile-menu a{color:rgba(255,255,255,.9); border-bottom:1px solid rgba(255,255,255,.15);}
-.home-mobile-menu .btn{margin-top:12px;}
+.home-mobile-menu .btn{margin-top:12px; border-bottom:none;}
+.home-mobile-menu .btn-white{color:var(--teal-dark);}
 
 /* ---------- hero ---------- */
 .home-hero{padding:56px 0 40px; text-align:center;}
 .home-hero-inner{max-width:760px;}
 .home-hero-sub{max-width:44ch; margin:0 auto 28px;}
-.home-hero-ctas{justify-content:center; margin-top:0; margin-bottom:40px;}
+.home-hero-ctas{justify-content:center; margin-top:0; margin-bottom:104px;}
 .home-hero-image-wrap{width:100%; padding:0 20px; margin-bottom:104px; box-sizing:border-box;}
 .home-hero-image{
   border-radius:var(--radius-xl);
