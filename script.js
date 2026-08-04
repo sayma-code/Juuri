@@ -81,8 +81,19 @@ const initMomentsCarousel = () => {
     track.scrollBy({ left: direction * (card.getBoundingClientRect().width + 20), behavior: 'smooth' });
   };
 
+  const updateArrows = () => {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const atStart = track.scrollLeft <= 4;
+    const atEnd = track.scrollLeft >= maxScroll - 4;
+    prevBtn.disabled = atStart;
+    nextBtn.disabled = maxScroll <= 4 ? true : atEnd;
+  };
+
   prevBtn.addEventListener('click', () => scrollByCard(-1));
   nextBtn.addEventListener('click', () => scrollByCard(1));
+  track.addEventListener('scroll', updateArrows, { passive: true });
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
 };
 
 const initForm = () => {

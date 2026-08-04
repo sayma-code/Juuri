@@ -7,7 +7,7 @@
   <title>Juuri — Find. Your. Voice.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Inter:wght@300;400;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,7 +17,7 @@
   <a href="#main" class="skip-link">Skip to content</a>
 
   <header class="home-header">
-    <nav class="nav container home-nav">
+    <nav class="nav home-nav">
       <a href="#top" class="logo home-logo">juuri</a>
       <div class="nav-links home-nav-links">
         <a href="#why">Why Juuri?</a>
@@ -53,14 +53,20 @@
           <a href="#how" class="btn btn-outline">See How It Works</a>
           <a href="#download" class="btn btn-primary">Download The App</a>
         </div>
+      </div>
 
+      <div class="home-hero-image-wrap">
         <div class="home-hero-image reveal">
-          <img src="images/home.jpg" alt="Image by zinkevych on Magnific">
+          <img src="images/home.jpg" alt="Image by magnific" loading="eager" fetchpriority="high" width="1200"
+            height="420">
         </div>
+      </div>
 
+      <div class="container">
         <p class="home-hero-copy">Because practice turns knowledge into confidence. Real clinical conversations ask
           you to listen, respond, reassure, explain, and adapt in the moment. Juuri helps you put what you've
-          learned into practice through contextualized conversations, so you feel more prepared when it matters.</p>
+          learned into practice through contextualized conversations, so you feel more prepared when it matters.
+        </p>
       </div>
     </section>
 
@@ -68,14 +74,14 @@
     <section class="home-moments" id="why">
       <div class="container">
         <div class="section-head center reveal">
-          <h2>Juuri is built around moments that matter</h2>
+          <h2 style="color: var(--stroke-navy);">Juuri is built around<br>moments that matter</h2>
           <p>Build confidence across a range of clinical conversations. Here's who you'll be talking to:</p>
         </div>
 
         <div class="moments-track" id="momentsTrack">
           <article class="moment-card">
             <div class="moment-image">
-              <img src="images/understand.jpg" alt="Image by Drazen Zigic on Magnific">
+              <img src="images/image1.jpg" alt="Image by DC Studio on Magnific" loading="lazy" width="274" height="320">
             </div>
             <h3>The patient who wants to be understood</h3>
             <p>Something's wrong, and they don't know what. Juuri helps you take their history, explain next steps,
@@ -84,7 +90,7 @@
 
           <article class="moment-card">
             <div class="moment-image">
-              <img src="images/colleauge.jpg" alt="Image by magnific">
+              <img src="images/image2.jpg" alt="Image by magnific" loading="lazy" width="274" height="320">
             </div>
             <h3>The colleague keeping the shift running</h3>
             <p>They're relying on you to pass along exactly what they need to know. Practice handovers, quick
@@ -93,7 +99,7 @@
 
           <article class="moment-card">
             <div class="moment-image">
-              <img src="images/family.jpg" alt="Image by DC Studio on Magnific">
+              <img src="images/image3.jpg" alt="Image by DC Studio on Magnific" loading="lazy" width="274" height="320">
             </div>
             <h3>The loved ones waiting for an answer</h3>
             <p>They're holding onto every word. Use Juuri to learn how to explain care clearly and compassionately
@@ -122,17 +128,15 @@
     <section class="home-steps" id="how">
       <div class="container">
         <div class="section-head center light reveal">
-          <h2>See how it works in <span class="accent">three</span> simple steps</h2>
+          <h2>See how it works in <span class="accent">three</span><br>simple steps</h2>
           <p>No overwhelming lesson plans, just a clear path from where you are to where you need to be.</p>
         </div>
 
         <div class="steps-track">
           <div class="step-col reveal">
             <span class="step-badge">1</span>
-            <div class="step-card">
-              <p class="step-card-title">Great start, Ewan.</p>
-              <p class="step-card-text">You'll begin at A2 (Building confidence). This is simply your starting
-                point, your conversations will adapt and grow with you overtime.</p>
+            <div class="step-card-image">
+              <img src="images/how_it_works_1.png" alt="Great start, Ewan. You'll begin at A2 (Building confidence). This is simply your starting point, your conversations will adapt and grow with you overtime." loading="lazy" width="760" height="452">
             </div>
             <h3 class="step-caption">Find your placement</h3>
             <p class="step-desc">Have a short conversation with a virtual patient to helps us understand where
@@ -141,21 +145,8 @@
 
           <div class="step-col reveal">
             <span class="step-badge">2</span>
-            <div class="step-card step-card-phone">
-              <div class="phone-status">
-                <span>9:41</span>
-                <span class="phone-icons">📶 🔋</span>
-              </div>
-              <p class="phone-context">Anna is a retired 72 year old who came in because she has been feeling
-                dizzy. Find out what's going on and help her feel at ease.</p>
-              <div class="chat-bubble chat-in">
-                <span class="waveform" aria-hidden="true"></span>
-                <span class="chat-text">Hei Anna, mä olen Ewan, sairaanhoitaja. Miten voin auttaa?</span>
-              </div>
-              <div class="chat-bubble chat-out">
-                <span class="waveform" aria-hidden="true"></span>
-                <span class="chat-text">Voi hei. Olen vähän huimauksissa.</span>
-              </div>
+            <div class="step-card-image">
+              <img src="images/how_it_works_2.png" alt="Anna is a retired 72 year old who came in because she has been feeling dizzy. Find out what's going on and help her feel at ease." loading="lazy" width="560" height="816">
             </div>
             <h3 class="step-caption">Have conversations</h3>
             <p class="step-desc">Practice real clinical moments through natural back and forth conversations in
@@ -164,12 +155,8 @@
 
           <div class="step-col reveal">
             <span class="step-badge">3</span>
-            <div class="step-card">
-              <p class="step-card-title">See how you performed</p>
-              <p class="step-card-label">Your strengths</p>
-              <ul class="step-card-list">
-                <li>You introduced yourself and used Anna's name to open the conversation</li>
-              </ul>
+            <div class="step-card-image">
+              <img src="images/how_it_works_3.png" alt="See how you performed. Your strengths: you introduced yourself and used Anna's name to open the conversation." loading="lazy" width="760" height="452">
             </div>
             <h3 class="step-caption">Receive feedback</h3>
             <p class="step-desc">Get personalised reports on what went well, what could be better, and tips on how
@@ -183,7 +170,7 @@
     <section class="home-faq" id="faq">
       <div class="container">
         <div class="section-head center reveal">
-          <h2>Got questions? <span class="accent-blue">We've answered some</span></h2>
+          <h2 style="color: var(--stroke-navy);">Got questions? <span class="accent-blue">We've answered some</span></h2>
         </div>
 
         <div class="faq-list" id="faqList">
@@ -248,7 +235,7 @@
     <!-- ============ FINAL CTA ============ -->
     <section class="home-final-cta" id="download">
       <div class="container">
-        <h2>You already know the language of healthcare. Now learn to say it in Finnish.</h2>
+        <h2 style="color: var(--stroke-navy);">You already know the language<br>of healthcare. Now learn to say<br>it in Finnish.</h2>
         <a href="#top" class="btn btn-primary">Download Juuri</a>
       </div>
     </section>
